@@ -1,3 +1,4 @@
+#Send the Words To Mirror Dimension
 a=input("Input:")
 b=""
 for i in a:
