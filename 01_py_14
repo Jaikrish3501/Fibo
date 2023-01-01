@@ -1,6 +1,15 @@
-x=0
-y=1
-while y<50:
-    print(y)
-    x,y=y,x+y
+def fun():
+    UPPER_CASE=0
+    LOWER_CASE=0
+    m=input("Enter String:")
+    for i in m:
+        if i.isupper():
+           UPPER_CASE+=1
+        elif i.islower():
+           LOWER_CASE+=1
+        else:
+           pass
+    print ("No. of Upper case characters : ", UPPER_CASE)
+    print ("No. of Lower case Characters : ", LOWER_CASE)
+fun()
     
