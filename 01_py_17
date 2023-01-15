@@ -1,6 +1,4 @@
-x=0
-y=1
-while y<50:
-    print(y)
-    x,y=y,x+y
+r = lambda a : a + 25
+a=int(input("Enter the num:"))
+print(r(a))
     
