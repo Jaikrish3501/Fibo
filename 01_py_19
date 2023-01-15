@@ -1,6 +1,7 @@
-x=0
-y=1
-while y<50:
-    print(y)
-    x,y=y,x+y
+def square_num(n):
+  return n * n
+nums = [4, 5, 2, 9]
+result = map(square_num, nums)
+print("Square the elements of the list:")
+print(list(result))
     
