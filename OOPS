@@ -52,11 +52,10 @@ class Account:
         self.title=title
         self.Balance=Balance
 class SavingsAccount(Account):
-    def __init__(self,interestRate=0):
+    def __init__(self,title=None,Balance=0,interestRate=0):
         self.interestRate=interestRate
-        # Account.__init__(self,title,Balance)
-obj=Account("Ashish", 5000)
-obj1=SavingsAccount(obj,5)
+        Account.__init__(self,title,Balance)
+obj1=SavingsAccount("Ashish", 5000,5)
 print(obj1.title)
 print(obj1.Balance)
 print(obj1.interestRate)
