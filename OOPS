@@ -1,6 +1,62 @@
-x=0
-y=1
-while y<50:
-    print(y)
-    x,y=y,x+y
-    
+#Square Numbers and Return Their Sum
+class Point():
+    def __init__(self,x,y,z):
+        self.x=x
+        self.y=y
+        self.z=z
+    def sqSum(self):
+        return self.x**2+self.y**2+self.z**2
+m=Point(1,3,5)
+print(m.sqSum())
+
+#Implement a Calculator Class
+class Calculator():
+    def __init__(self,num1,num2):
+        self.num1=num1
+        self.num2=num2
+    def add(self):
+        print (self.num1+self.num2)
+    def subtract(self):
+        print (self.num2-self.num1)
+    def multiply(self):
+        print (self.num1*self.num2)    
+    def divide(self):
+        print (self.num2/self.num1)
+obj = Calculator(10, 94)
+obj.add()
+obj.subtract()
+obj.multiply()
+obj.divide()
+
+#Implement a Calculator Class
+class Calculator():
+    def __init__(self,num1,num2):
+        self.num1=num1
+        self.num2=num2
+    def add(self):
+        return (self.num1+self.num2)
+    def subtract(self):
+        return (self.num2-self.num1)
+    def multiply(self):
+        return (self.num1*self.num2)    
+    def divide(self):
+        return (self.num2/self.num1)
+obj = Calculator(10, 94)
+print(obj.add())
+print(obj.subtract())
+print(obj.multiply())
+print(obj.divide())
+
+class Account:
+    def __init__(self,title=None,Balance=0):
+        self.title=title
+        self.Balance=Balance
+class SavingsAccount(Account):
+    def __init__(self,interestRate=0):
+        self.interestRate=interestRate
+        # Account.__init__(self,title,Balance)
+obj=Account("Ashish", 5000)
+obj1=SavingsAccount(obj,5)
+print(obj1.title)
+print(obj1.Balance)
+print(obj1.interestRate)
