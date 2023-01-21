@@ -1,4 +1,4 @@
-#Square Numbers and Return Their Sum
+#Challenge 1: Square Numbers and Return Their Sum
 class Point():
     def __init__(self,x,y,z):
         self.x=x
@@ -9,7 +9,7 @@ class Point():
 m=Point(1,3,5)
 print(m.sqSum())
 
-#Implement a Calculator Class
+#Challenge 2: Implement a Calculator Class
 class Calculator():
     def __init__(self,num1,num2):
         self.num1=num1
@@ -28,7 +28,7 @@ obj.subtract()
 obj.multiply()
 obj.divide()
 
-#Implement a Calculator Class
+#Challenge 2: Implement a Calculator Class
 class Calculator():
     def __init__(self,num1,num2):
         self.num1=num1
@@ -47,6 +47,7 @@ print(obj.subtract())
 print(obj.multiply())
 print(obj.divide())
 
+#Challenge 4: Implement a Banking Account
 class Account:
     def __init__(self,title=None,Balance=0):
         self.title=title
@@ -60,6 +61,7 @@ print(obj1.title)
 print(obj1.Balance)
 print(obj1.interestRate)
 
+#Challenge 4: Implement a Banking Account
 class Account:
     def __init__(self,title=None,Balance=0):
         self.title=title
@@ -72,3 +74,17 @@ obj=SavingsAccount("Ashish", 5000,5)
 print(obj.title)
 print(obj.Balance)
 print(obj.interestRate)
+
+#Challenge 4: Implement a Banking Account
+class Account:
+    def __init__(self,title=None,Balance=0):
+        self.title=title
+        self.Balance=Balance
+class SavingsAccount(Account):
+    def __init__(self,interestRate=0):
+        self.interestRate=interestRate
+obj=Account("Ashish", 5000)
+print(obj.title)
+print(obj.Balance)
+obj1=SavingsAccount(5)
+print(obj1.interestRate)
