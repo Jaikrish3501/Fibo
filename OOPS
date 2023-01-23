@@ -88,3 +88,44 @@ print(obj.title)
 print(obj.Balance)
 obj1=SavingsAccount(5)
 print(obj1.interestRate)
+
+#Challenge 3: Implement the Complete Student Class
+class Student:
+    def setName(self,Name):
+        self.__Name=Name
+    def getName(self):
+       return self.__Name
+    def setRollnumber(self,Rollnumber):
+        self.__Rollnumber=Rollnumber
+    def getRollnumber(self):
+        return self.__Rollnumber
+x=Student()
+x.setName("Jai")
+x.setRollnumber("05")
+print("Name:",x.getName())
+print("Rollnumber:",x.getRollnumber())
+ 
+#Challenge 5: Handling a Bank Account
+class Account:
+    def __init__(self,title=None,balance=0):
+        self.title = title
+        self.balance = balance
+    def withdrawal(self,amount):
+        self.balance=self.balance-amount
+    def deposit(self,amount):
+        self.balance=self.balance+amount
+    def getBalance(self):
+        return self.balance
+class SavingsAccount(Account):
+    def __init__(self, title=None, balance=0, interestRate=0):
+        super().__init__(title,balance)
+        self.interestRate = interestRate
+    def interestAmount(self):
+        return (self.balance*self.interestRate)/100
+x = SavingsAccount("Ashish", 5540, 3)
+print("Balance:",x.getBalance())
+x.deposit(1000)
+print("Balance after deposit:",x.getBalance())
+x.withdrawal(500)
+print("Balance after withdrawal:",x.getBalance())
+print("Interestramount:",x.interestAmount())
